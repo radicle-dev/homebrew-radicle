@@ -7,7 +7,7 @@ distribute pre-production releases.
 Add the custom tap to have the Formulae available for install.
 
 ```
-brew tap oscoin/homebrew-radicle
+brew tap oscoin/radicle
 brew install radicle-alpha
 ```
 
