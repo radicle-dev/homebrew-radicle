@@ -1,17 +1,17 @@
 class RadicleAlpha < Formula
   desc "Peer-to-peer stack for code collaboration"
   homepage "http://radicle.xyz"
-  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_d166d071f3a9e572998a89e28df03dd7100df879_x86_64-darwin.tar.gz"
+  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.01-a322dfb_x86_64-darwin.tar.gz"
   version "0.1.0"
-  sha256 "4ef62f13f5a0795835f7fe67c6ea85bb8b0b01c0a9c4b74f898d3d25e8113d41"
+  sha256 "3cbd5ae9d83dde38dbf331530ed722f55ed8a52d098b576975f61dc887f95d0b"
   head "https://github.com/oscoin/radicle"
 
   depends_on "ipfs"
 
   def install
-    bin.install Dir.glob("local/bin/rad*").concat(Dir.glob("local/bin/git*"))
-    doc.install Dir.glob("local/share/doc/radicle/*")
-    share.install "local/share/radicle"
+    bin.install Dir.glob("bin/*")
+    lib.install "lib/radicle"
+    share.install "share/doc"
   end
 
   test do
