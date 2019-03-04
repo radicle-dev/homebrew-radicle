@@ -1,20 +1,18 @@
-class RadicleAlpha < Formula
-  desc "Peer-to-peer stack for code collaboration"
+class RadicleAlphaIpfs < Formula
+  desc "Radicle IPFS backend"
   homepage "http://radicle.xyz"
   url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.01-a322dfb_x86_64-darwin.tar.gz"
   version "0.1.0"
   sha256 "3cbd5ae9d83dde38dbf331530ed722f55ed8a52d098b576975f61dc887f95d0b"
   head "https://github.com/oscoin/radicle"
 
-  depends_on "radicle-alpha-ipfs"
+  depends_on "ipfs"
 
   def install
-    bin.install Dir.glob("bin/*")
-    lib.install "lib/radicle"
-    share.install "share/doc"
+    bin.mkpath
   end
 
-  plist_options :manual => "rad daemon-radicle"
+  plist_options :manual => "#{HOMEBREW_PREFIX}/rad daemon-ipfs"
 
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
@@ -22,22 +20,25 @@ class RadicleAlpha < Formula
     <plist version="1.0">
     <dict>
       <key>KeepAlive</key>
-      <true/>
+      <dict>
+        <key>OtherJobEnabled</key>
+        <string>homebrew.mxcl.radicle-alpha.plist</string>
+      </dict>
       <key>Label</key>
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
         <string>#{bin}/rad</string>
-        <string>daemon-radicle</string>
+        <string>daemon-ipfs</string>
       </array>
       <key>RunAtLoad</key>
       <true/>
       <key>WorkingDirectory</key>
       <string>#{HOMEBREW_PREFIX}</string>
       <key>StandardOutPath</key>
-      <string>#{var}/log/radicle-daemon.log</string>
+      <string>#{var}/log/radicle-ipfs.log</string>
       <key>StandardErrorPath</key>
-      <string>#{var}/log/radicle-daemon.log</string>
+      <string>#{var}/log/radicle-ipfs.log</string>
     </dict>
     </plist>
   EOS
