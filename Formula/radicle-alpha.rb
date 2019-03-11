@@ -1,9 +1,9 @@
 class RadicleAlpha < Formula
   desc "Peer-to-peer stack for code collaboration"
   homepage "http://radicle.xyz"
-  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.04-d21900b_x86_64-darwin.tar.gz"
+  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.11-96f7c67_x86_64-darwin.tar.gz"
   version "0.1.0"
-  sha256 "f7d9778a4b018d3ad570fbf111fc80a3ad6791da8f00cca5c5d9323037693b51"
+  sha256 "70408ad946e7b8410e849485bf5678217267267878990a6b5aff19662953432a"
   head "https://github.com/oscoin/radicle"
 
   depends_on "radicle-alpha-ipfs"
