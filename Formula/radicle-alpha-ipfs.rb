@@ -1,9 +1,10 @@
 class RadicleAlphaIpfs < Formula
+  @@version = "2019.03.12-9ad916d"
   desc "Radicle IPFS backend"
   homepage "http://radicle.xyz"
-  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_2019.03.04-d21900b_x86_64-darwin.tar.gz"
-  version "0.1.0"
-  sha256 "f7d9778a4b018d3ad570fbf111fc80a3ad6791da8f00cca5c5d9323037693b51"
+  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_#{@@version}_x86_64-darwin.tar.gz"
+  version "0.1.0-#{@@version}"
+  sha256 "c92b7f8f35cc8c230372ba3c6b458ce3335302fdae2e1d241a4adbfee0240716"
   head "https://github.com/oscoin/radicle"
 
   depends_on "ipfs"
