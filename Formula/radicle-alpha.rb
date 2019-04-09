@@ -1,10 +1,10 @@
 class RadicleAlpha < Formula
-  @@version = "2019.03.12-9ad916d"
+  @@version = "v0.0.2"
   desc "Peer-to-peer stack for code collaboration"
-  homepage "http://radicle.xyz"
+  homepage "https://radicle.xyz"
   url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_#{@@version}_x86_64-darwin.tar.gz"
-  version "0.1.0-#{@@version}"
-  sha256 "c92b7f8f35cc8c230372ba3c6b458ce3335302fdae2e1d241a4adbfee0240716"
+  version "#{@@version}"
+  sha256 "6b423f3b51fa5aecd75be492d259f2077785f0a56c6388e1e2a2c69b4c732bee"
   head "https://github.com/oscoin/radicle"
 
   depends_on "radicle-alpha-ipfs"
