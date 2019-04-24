@@ -1,4 +1,4 @@
-require_relative "version"
+require_relative "../version"
 
 class RadicleAlphaIpfs < Formula
   @@version = RadicleVersion::VERSION
