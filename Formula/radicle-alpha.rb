@@ -1,11 +1,13 @@
+require "./version"
+
 class RadicleAlpha < Formula
-  @@version = "v0.0.3"
+  @@version = RadicleVersion::VERSION
   desc "Peer-to-peer stack for code collaboration"
   homepage "https://radicle.xyz"
   url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_#{@@version}_x86_64-darwin.tar.gz"
   version "#{@@version}"
-  sha256 "004cab2eaddfe3dcfcbaab59526545ab3b0639ff2fa21733c4bf42376e395951"
-  head "https://github.com/oscoin/radicle"
+  sha256 RadicleVersion::SHA256
+  head "https://github.com/radicle-dev/radicle"
 
   depends_on "radicle-alpha-ipfs"
 
