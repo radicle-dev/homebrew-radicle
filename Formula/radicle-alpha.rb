@@ -4,7 +4,7 @@ class RadicleAlpha < Formula
   @@version = RadicleVersion::VERSION
   desc "Peer-to-peer stack for code collaboration"
   homepage "https://radicle.xyz"
-  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_#{@@version}_x86_64-darwin.tar.gz"
+  url "http://storage.googleapis.com/static.radicle.xyz/releases/radicle_v#{@@version}_x86_64-darwin.tar.gz"
   version "#{@@version}"
   sha256 RadicleVersion::SHA256
   head "https://github.com/radicle-dev/radicle"
